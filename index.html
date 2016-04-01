@@ -13,49 +13,56 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body>
+
+    <div class="brand">Integrated Compact Baby Monitor</div>
+    <div class="address-bar">2329 West Mall | Vancouver, BC | V6T 1Z4</div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">ICBM</span>
-                </a>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">ICBM</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a href="team.html">Our Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Monitor</a>
+                        <a href="blog.html">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -64,42 +71,12 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">ICBM</h1>
-                        <p class="intro-text">A quick way to imprision your baby.<br>Created by Team Winners</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="container">
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About ICBM</h2>
-                <p>The Integrated Compact Baby Monitor is a device created by Team Winners. It can be yours right now, simply buy it for $4.99<a href="http:https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjTvqmW7O3LAhWknIMKHddSCyUQjRwIBw&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDuck&psig=AFQjCNE940INTLydo5UYlzZwERGtWV8M_g&ust=1459614042832750">the preview page</a>.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Baby Monitor</h2>
-					    <div id="video-jwplayer_wrapper" style="position: relative; display: block; width: 960px; height: 540px;">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+					    <div id="video-jwplayer_wrapper" style="position: relative; display: block; width: 1080x; height: 540px;">
 						  <object type="application/x-shockwave-flash" data="/jwplayer/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="video-jwplayer" name="video-jwplayer" tabindex="0">
 							<param name="allowfullscreen" value="true">
 							<param name="allowscriptaccess" value="always">
@@ -109,43 +86,62 @@
 						  <div id="video-jwplayer_aspect" style="display: none;"></div>
 						  <div id="video-jwplayer_jwpsrv" style="position: absolute; margin:0 auto; top: 0px; z-index: 10;"></div>
 						</div>
-                    <p>Look! So cute!</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2 class="brand-before">
+                        <small>Welcome to</small>
+                    </h2>
+                    <h1 class="brand-name">ICBM</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>By
+                            <strong>Team Winners</strong>
+                        </small>
+                    </h2>
+					<button type="button">Alex Special!</button>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Us</h2>
-                <p>Feel free to give us some feedback!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">nickwu@alumni.ubc.ca</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">About 
+                        <strong>our Product</strong>
+                    </h2>
+                    <hr>
+                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
+                    <hr class="visible-xs">
+                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
+                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Beautiful boxes
+                        <strong>to showcase your content</strong>
+                    </h2>
+                    <hr>
+                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Footer -->
+    </div>
+    <!-- /.container -->
+
     <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Team Winners 2016</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Team Winners 2016</p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -154,15 +150,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
 
 	<!-- Camera Player -->
 	<script src="/jwplayer/jwplayer.js"></script>
@@ -177,7 +164,7 @@
         bufferlength:0.1
       }
       , deliveryType: "streaming"
-      , width: 960
+      , width: 1080
       , height: 540
       , player: {
         modes: {
