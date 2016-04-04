@@ -35,18 +35,18 @@
 		<div class="">
 			<div class="row">
 				<div class="col-xs-1 col-xs-offset-1">
-					<button type="button" class="btn btn-default btn-lg" aria-label="up"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button>
+					<button type="button" class="btn btn-default btn-lg" id="up-button" aria-label="up"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button>
 				</div>
 				<div class="col-xs-2 col-xs-offset-6">
-					<button type="button" class="btn btn-default btn-lg">hi</button>
+					<button type="button" class="btn btn-default btn-lg" id="hi1">hi</button>
 				</div>
 			</div>
 			<div class="row">
 					<div class ="col-xs-2">
-						<button type="button" class="btn btn-default btn-lg" aria-label="right"><span class ="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
+						<button type="button" class="btn btn-default btn-lg" id="left-button" aria-label="left"><span class ="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
 					</div>
 					<div class ="col-xs-1">
-						<button type="button" class="btn btn-default btn-lg" aria-label="left"><span class ="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
+						<button type="button" class="btn btn-default btn-lg" id="right-button" aria-label="right"><span class ="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
 					</div>
 					<div class ="col-xs-2 col-xs-offset-5">
 						<button type="button" class="btn btn-default btn-lg">hi</button>
@@ -55,11 +55,20 @@
 			</div>
 			<div class="row">
 				<div class ="col-xs-1 col-xs-offset-1">
-					<button type="button" class="btn btn-default btn-lg" aria-label="down"><span class ="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
+					<button type="button" class="btn btn-default btn-lg" id="down-button" aria-label="down"><span class ="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
 				</div>
 			</div>
 		</div>
 	<div>
+	
+	<script>
+	document.getElementById("up-button").onclick = function() {up()};
+	document.getElementById("left-button").onclick = function() {left()};
+	document.getElementById("right-button").onclick = function() {right()};
+	document.getElementById("down-button").onclick = function() {down()};
+	function up(){
+	
+	}
+	</script>
 </body>
-
 </html>
