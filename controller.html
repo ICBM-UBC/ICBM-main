@@ -73,16 +73,6 @@
         <div class="row">
             <div class="box">
 				<div class="col-lg-12">
-					<div id="video-jwplayer_wrapper" style="position: relative; display: block; width: 1080x; height: 540px;">
-					  <object type="application/x-shockwave-flash" data="/jwplayer/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="video-jwplayer" name="video-jwplayer" tabindex="0">
-						<param name="allowfullscreen" value="true">
-						<param name="allowscriptaccess" value="always">
-						<param name="seamlesstabbing" value="true">
-						<param name="wmode" value="opaque">
-					  </object>
-					  <div id="video-jwplayer_aspect" style="display: none;"></div>
-					  <div id="video-jwplayer_jwpsrv" style="position: absolute; margin:0 auto; top: 0px; z-index: 10;"></div>
-					</div>
 				</div>
                 <div class="col-lg-12 text-center">
                     <h2 class="brand-before">
@@ -95,45 +85,10 @@
                             <strong>Team Winners</strong>
                         </small>
                     </h2>
-					<form action="JavaScript:newPopup('http://192.168.43.166:3000');"><input type="submit" value="To Controller!"></form>
-				</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">About 
-                        <strong>our Product</strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>Our first product is the Internet Connected Baby Monitor (ICBM), our main funcitionalities consists of:</p>
-					<li>Sending video feedback to our users, even in low light</li>
-					<li>Detecting the motion of the child</li>
-					<li>Checking the temperature and humidity of the room</li>
-					<li>Playing a selection of lullabies with the click of a button</li>
-					<li>Remotely adjustable camera direction</li>
-                    <p>We provide a simple web user interface for our users to control the camera, play a lullaby, or get data from our sensors.</p>
-                    <p></p>
+					<form action="http://192.168.43.166:3000" target="_blank"><input type="submit" value="To Controller!"></form>
                 </div>
             </div>
         </div>
-		
-		<div class="row">
-            <div class="box">
-                <div class="col-lg-12 text-center">
-                    <hr>
-                    <h2 class="intro-text text-center"><strong>FAQ</strong></h2>
-                    <hr>
-					<li><p>What hardware are you using?</p></li>
-					<p>Raspberry Pi 2 B, Arduino Uno, <p>
-                </div>
-            </div>
-        </div>
-		
 		
     </div>
     <!-- /.container -->
@@ -154,47 +109,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-	<!-- Camera Player -->
-	<script src="/jwplayer/jwplayer.js"></script>
-    <script>jwplayer.key="Dztd6fPx1dsBKrY/Ppq0pqKBL8spJvOZQ6fZEA==";</script>
-
-    <script type="text/javascript">
-    jwplayer('video-jwplayer').setup({
-      flashplayer:"/jwplayer/jwplayer.flash.swf"
-      , file:"rtmp://" + window.location.hostname + "/flvplayback/flv:myStream.flv"
-      , autoStart: true
-      , rtmp:{
-        bufferlength:0.1
-      }
-      , deliveryType: "streaming"
-      , width: 1080
-      , height: 540
-      , player: {
-        modes: {
-          linear: {
-            controls:{
-              stream:{
-                manage:false
-                , enabled: false
-              }
-            }
-          }
-        }
-      }
-      , shows: {
-        streamTimer: {
-          enabled: true
-          , tickRate: 100
-        }
-      }
-    });
-    </script>
-	<script type="text/javascript">
-	function newPopup(url) {
-		popupWindow = window.open(
-			url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
-	}
-	</script>
 </body>
 
 </html>
