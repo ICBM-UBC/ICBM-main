@@ -11,6 +11,7 @@
 
     <title>Team Winners - Home</title>
 
+	
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -37,30 +38,44 @@
 				<div class="col-xs-1 col-xs-offset-1">
 					<button type="button" class="btn btn-default btn-lg" id="up-button" aria-label="up"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button>
 				</div>
-				<div class="col-xs-2 col-xs-offset-6">
-					<button type="button" class="btn btn-default btn-lg" id="hi1">hi</button>
-				</div>
-			</div>
-			<div class="row">
-					<div class ="col-xs-2">
-						<button type="button" class="btn btn-default btn-lg" id="left-button" aria-label="left"><span class ="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
-					</div>
-					<div class ="col-xs-1">
-						<button type="button" class="btn btn-default btn-lg" id="right-button" aria-label="right"><span class ="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
-					</div>
-					<div class ="col-xs-2 col-xs-offset-5">
-						<button type="button" class="btn btn-default btn-lg">hi</button>
+				<div class="col-xs-2 col-xs-offset-5">
+					<div class="dropdown">
+					  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown"><span id="lullaby">Select Lullaby</span>
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu">
+						<li><a onclick="selectLullaby('hello')">lullaby 1</a></li>
+						<li><a onclick="selectLullaby('how are')">lullaby 2</a></li>
+						<li><a onclick="selectLullaby('you')">lullaby 3</a></li>
+					  </ul>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class ="col-xs-1 col-xs-offset-1">
+				<div class="col-xs-2">
+					<button type="button" class="btn btn-default btn-lg" id="left-button" aria-label="left"><span class ="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-xs-1">
+					<button type="button" class="btn btn-default btn-lg" id="right-button" aria-label="right"><span class ="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-5">
+					<button type="button" id ="hi1" class="btn btn-default btn-lg">hi</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-1 col-xs-offset-1">
 					<button type="button" class="btn btn-default btn-lg" id="down-button" aria-label="down"><span class ="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-6">
+					<button type="button" class="btn btn-default btn-lg">hi</button>
 				</div>
 			</div>
 		</div>
 	<div>
 	
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script>
 	document.getElementById("up-button").onclick = function() {up()};
 	document.getElementById("left-button").onclick = function() {left()};
@@ -68,6 +83,9 @@
 	document.getElementById("down-button").onclick = function() {down()};
 	function up(){
 	
+	}
+	function selectLullaby(name){
+		document.getElementById("lullaby").innerHTML = name;
 	}
 	</script>
 </body>

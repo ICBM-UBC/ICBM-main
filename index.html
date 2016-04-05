@@ -95,7 +95,7 @@
                             <strong>Team Winners</strong>
                         </small>
                     </h2>
-					<form action="JavaScript:newPopup('192.168.43.166:3000');"><input type="submit" value="To Controller!"></form>
+					<form action="JavaScript:newPopup('http://192.168.43.166:3000');"><input type="submit" value="To Controller!"></form>
 				</div>
             </div>
         </div>
@@ -188,11 +188,9 @@
         }
       }
     });
-    </script>
-	<script type="text/javascript">
+	
 	function newPopup(url) {
-		popupWindow = window.open(
-			url,'popUpWindow','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=200,height=200')
+		popupWindow = window.open(url,'popUpWindow','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=200,height=200')
 	}
 	</script>
 </body>
