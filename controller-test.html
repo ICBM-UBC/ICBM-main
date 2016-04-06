@@ -10,9 +10,9 @@
 
     <title>Controller - Home</title>
 	<!-- Style Sheets-->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/business-casual.css" rel="stylesheet">
-	<link href="public/css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/business-casual.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -55,7 +55,7 @@
 					<button type="button" class="btn btn-default btn-lg" id="right-button" aria-label="right"><span class ="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
 				</div>
 				<div class="col-xs-2 col-xs-offset-5">
-					<button type="button" id ="hi1" class="btn btn-default btn-lg">hi</button>
+					<button type="button" id ="init" onclick= "myFunction()" class="btn btn-default btn-lg">init</button>
 				</div>
 			</div>
 			<div class="row">
@@ -64,6 +64,16 @@
 				</div>
 				<div class="col-xs-2 col-xs-offset-6">
 					<button type="button" class="btn btn-default btn-lg">hi</button>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<p>Distance: <span id="distance_data"></span></p>
+						<p>Temperature: <span id="temperature_data"></span></p>
+						<p>Humidity: <span id="humidity_data"></span></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -86,14 +96,15 @@
 	</script>
 
 	<script src="/socket.io/socket.io.js"></script>
-	<script>
+	<script type="text/javascript">
+	var d1 = 0;
 	var socket = io();
 	document.getElementById("up-button").onclick = function() {up()};
 	document.getElementById("left-button").onclick = function() {left()};
 	document.getElementById("right-button").onclick = function() {right()};
 	document.getElementById("down-button").onclick = function() {down()};
 	function up(){
-	socket.emit('up');
+		socket.emit('up');
 	}
 	function down(){
 		socket.emit('down');
@@ -113,6 +124,17 @@
 	function doSomething(){
 		socket.emit('doSomething');
 	}
+	function setData(){
+		document.getElementById("distance_data").innerHTML = d1;
+		document.getElementById("temperature_data").innerHTML = d1;
+		document.getElementById("humidity_data").innerHTML = d1;
+	}
+	
+	function myFunction() {
+		setInterval(setData, 1000);
+	}
+	//dataIn
+	//1 distance, 3 temp 5 humidity
 	</script>
 </body>
 </html>
